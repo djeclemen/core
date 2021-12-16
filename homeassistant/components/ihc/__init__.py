@@ -262,6 +262,7 @@ def get_manual_configuration(hass, config, conf, ihc_controller, controller_id):
             platform_setup = conf.get(platform)
             for sensor_cfg in platform_setup:
                 name = sensor_cfg[CONF_NAME]
+                unique_id = sensor_cfg[CONF_ID]
                 device = {
                     "ihc_id": sensor_cfg[CONF_ID],
                     "ctrl_id": controller_id,
